@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TFSA Calculator</title>
+    
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+	</head>
+
+<body>
+    <!-- CONTENT -->
+
+    <div class="container">
+
+        <!-- HEADER -->        
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>TFSA Calculator</h1>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <div class="panel panel-primary">
+
+                    <div class="panel-heading">Calculate Contribution Room</div>                
+
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <!-- BIRTHDAY -->
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Birth Date:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="birthdate">
+                                </div>
+                            </div>
+
+                            <!-- WITHDRAWALS -->
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">Withdrawals made this year:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="0.00" id="withdrawal">
+                                </div>
+                            </div>
+                            
+                            <!-- ROOM -->
+
+                             <div class="form-group">
+                                <label class="control-label col-sm-2">Contribution room:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="0.00" id="room">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button onclick="calculate_tfsa()" class="btn btn-default">Calculate</button>
+                                </div>                  
+                            </div>  
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+  
+    <!-- JQUERY SCRIPTS -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="js/bootstrap.min.js"><\/script>')}</script>
+
+    <script src="calculate.js"></script> 
+        
+    <!-- CSS FAILOVER -->
+
+    <script>
+        $(document).ready(function() {
+            var bodyColor = $('body').css('color');
+            if(bodyColor != 'rgb(0,0,0)') {
+                $("head").prepend('<link rel="styelsheet href="css/bootstrap.min.css">');
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>    
