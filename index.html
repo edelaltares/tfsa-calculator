@@ -50,20 +50,30 @@
                             <!-- WITHDRAWALS -->
 
                             <div class="form-group">
-                                <label class="control-label col-sm-2">Withdrawals made this year:</label>
+                                <label class="control-label col-sm-2">Withdrawals made in <script type="text/javascript">document.write(new Date().getFullYear() - 1);</script>:</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" placeholder="0.00" id="withdrawal">
+                                    <input type="text" class="form-control" placeholder="0.00" id="withdrawal-last">
                                 </div>
                             </div>
                             
                             <!-- ROOM -->
 
                              <div class="form-group">
+                                <label class="control-label col-sm-2">Withdrawals made in <script type="text/javascript">document.write(new Date().getFullYear());</script>:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" placeholder="0.00" id="withdrawal">
+                                </div>
+                            </div>
+
+                            <!-- ROOM -->                            
+
+                            <div class="form-group">
                                 <label class="control-label col-sm-2">Contribution room:</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" placeholder="0.00" id="room">
                                 </div>
                             </div>
+
 
 			 </form>
 

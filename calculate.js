@@ -4,7 +4,7 @@ function calculate_tfsa() {
 
     birthdate = document.getElementById("birthdate").value;
     withdrawals = document.getElementById("withdrawal").value;
-
+    last_withdrawal = document.getElementById("withdrawal-last").value;
     birthdate = birthdate.split("-");
 
     var year;
@@ -39,6 +39,7 @@ function calculate_tfsa() {
     }
     
     room -= Number(withdrawals);
+    room += Number(last_withdrawal);
 
     document.getElementById("room").value = room.toLocaleString();
 }
